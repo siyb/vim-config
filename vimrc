@@ -53,9 +53,11 @@ set shiftwidth=8
 " no line wrapping
 set nowrap
 
-" indentation based on filetype (JavaScript Related Stuff)
+" indentation & beautification based on filetype (JavaScript Related Stuff)
 set suffixesadd=.js,.json,.jade,.coffee
 autocmd BufRead,BufNewFile *.json set filetype=javascript
 autocmd FileType javascript set iskeyword=@,48-57,-,192-255
 autocmd FileType javascript setlocal ts=4 sts=4 sw=4 et
 autocmd FileType javascript :setl omnifunc=jscomplete#CompleteJS
+
+nmap ff :%!js-beautify -j -q -B -f -<CR>
