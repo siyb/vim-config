@@ -61,3 +61,7 @@ autocmd FileType javascript setlocal ts=4 sts=4 sw=4 et
 autocmd FileType javascript :setl omnifunc=jscomplete#CompleteJS
 
 nmap ff :%!js-beautify -j -q -B -f -<CR>
+
+
+" syntax checking
+call pathogen#infect()
