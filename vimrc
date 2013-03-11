@@ -62,6 +62,13 @@ autocmd FileType javascript :setl omnifunc=jscomplete#CompleteJS
 
 nmap ff :%!js-beautify -j -q -B -f -<CR>
 
+" auto complete
+imap <C-space> <C-n>
 
 " syntax checking
 call pathogen#infect()
+
+
+" enable mouse in all mode
+set ttymouse=urxvt
+set mouse=a
